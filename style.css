@@ -24,7 +24,7 @@ body{
     min-height: 100vh;
 }
 
-section{
+.section{
     background-color: var(--Dark-Blue);
     margin: 1rem auto ;
     border-radius: .55rem;
@@ -115,7 +115,7 @@ padding: 0 .2em ;
         grid-template-columns: 1fr 2fr;
         
     }
-    section{
+   .section{
         margin: 1rem;
         position: relative;
       
