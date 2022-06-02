@@ -58,21 +58,30 @@ body{
 }
 i{
     display: block;
-    height: 1rem;
+    height: 1.2rem;
     background-color: var(--Very-Dark-Blue);
     border-radius: 5rem;
     margin: .5rem 0;
+    position: relative;
    
 }
-i::after{
+i::before{
     content: "";
     display: block;
     height: 100%;
     width: 70%;
     border-radius: 8rem;
     background-image: linear-gradient(to right, var(--Gradient-1) 0%, var(--Gradient-2) 100%);
-    
     background-repeat: no-repeat;
+}
+i::after{
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    border: .5rem solid white;
+    left: 66%;
+    top: 0px;
+    bottom: 0px;
 }
 .scale{
     display: flex;
@@ -91,13 +100,11 @@ i::after{
 }
 .data-bal .prime{
 color: var(--Dark-Blue);
-font-size: 1.5rem;
-font-weight: 700;
 padding: 0 .2em ;
 }
 .data-bal .body{
     color: var(--Grayish-Blue);
-    font-weight: 400;
+    font-size: .875rem;
     text-transform: capitalize;
 }
 @media (min-width:720px) {
