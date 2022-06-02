@@ -1,0 +1,151 @@
+:root{
+--Gradient-1: hsl(6, 100%, 80%);
+--Gradient-2: hsl(335, 100%, 65%);
+--Pale-Blue: hsl(243, 100%, 93%);
+--Grayish-Blue: hsl(229, 7%, 55%);
+--Dark-Blue: hsl(228, 56%, 26%);
+--Very-Dark-Blue: hsl(229, 57%, 11%);
+
+}
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: .875rem;   
+    background-image: url("images/bg-mobile.png");
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section{
+    background-color: var(--Dark-Blue);
+    margin: 1rem auto ;
+    border-radius: .55rem;
+    padding: 2rem;
+    
+}
+.prime-section{
+    border-top-right-radius: 6rem;
+    padding-right: 6rem;
+}
+.logo{
+    display: block;
+    margin-bottom: 2rem;
+}
+.menu-btn{
+    width: 40px;
+    height: 44px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: .5rem;
+    padding: .7rem;
+    margin: 0 .5rem;
+}
+.clr-prime{
+    color: white;
+}
+.usage-section{
+    color: var(--Pale-Blue);
+    padding-bottom: 0;
+    display: grid;
+   
+}
+i{
+    display: block;
+    height: 1rem;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 5rem;
+    margin: .5rem 0;
+   
+}
+i::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 70%;
+    border-radius: 8rem;
+    background-image: linear-gradient(to right, var(--Gradient-1) 0%, var(--Gradient-2) 100%);
+    
+    background-repeat: no-repeat;
+}
+.scale{
+    display: flex;
+    justify-content: space-between;
+
+}
+.data-bal{
+    padding: 1rem;
+    background-color: white;
+    border-radius: .5rem;
+    width: max-content;
+    justify-self: center;
+    position: relative;
+    top: 1.5rem;
+
+}
+.data-bal .prime{
+color: var(--Dark-Blue);
+font-size: 1.5rem;
+font-weight: 700;
+padding: 0 .2em ;
+}
+.data-bal .body{
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+@media (min-width:720px) {
+    body{
+       
+        background-image: url("images/bg-desktop.png");
+        background-repeat: no-repeat;
+        background-position: bottom  left;
+        background-size:100%;
+    }
+    main{
+        display: grid;
+        align-items: flex-end;
+        justify-content: center;
+        grid-template-columns: 1fr 2fr;
+        
+    }
+    section{
+        margin: 1rem;
+        position: relative;
+      
+     
+    }
+    .usage-section{
+        padding-bottom: 2rem;
+        grid-column: 2/3;
+    }
+    .data-bal{
+        padding: 1rem;
+        background-color: white;
+        border-radius: .5rem;
+        position: absolute;
+        transform: translate(-10%,-60%);
+        top: 0rem;
+        right: 1rem;       
+    
+    }
+    .data-bal::after{
+        content: "";
+        right: 0;
+        width: 0;
+        height: 0;
+        border-right: 36px solid white;
+        border-bottom: 36px solid rgba(0, 0, 0, 0);
+        border-top: 36px solid rgba(0, 0, 0, 0);
+        position: absolute;
+        z-index: -1;
+
+    }
+   
+}
