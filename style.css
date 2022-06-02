@@ -49,6 +49,7 @@ body{
 }
 .clr-prime{
     color: white;
+    font-weight: 700;
 }
 .usage-section{
     color: var(--Pale-Blue);
@@ -79,7 +80,7 @@ i::after{
     border-radius: 50%;
     position: absolute;
     border: .5rem solid white;
-    left: 66%;
+    left: 67%;
     top: 0px;
     bottom: 0px;
 }
